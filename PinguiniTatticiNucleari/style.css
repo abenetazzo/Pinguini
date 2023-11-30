@@ -214,3 +214,32 @@ thead {
 	background-color: var(--flagColor);
 	color: var(--headerTxtColor);
 }
+
+main#biografia {
+    width: 100%;
+}
+
+#biografia div {
+    width: 80%;
+    margin: auto;
+}
+
+#biografia em {
+	font-style: normal;
+	font-weight: bold;
+}
+
+#biografia p {
+    text-align: justify;
+}
+
+div#fotoBand {
+    width: 100%;
+    background-color: #d0ab73;
+    background-image: url("img/band.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 3em 0;
+    height: 25em;
+}
