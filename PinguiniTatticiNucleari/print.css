@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    font-size: 12pt;
+    font-family: "Times New Roman", serif;
+    line-height: 1.5em; /*si potrebbe anche togliere per essere green*/
+    margin: auto;
+}
+
+header {
+    text-align: left;
+    padding: 1em 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+header h1 {
+	content: url("img/logo.png");
+	width: 4cm;
+	filter: invert(100%);
+	margin: auto;
+}
+
+#menu {
+	display: none;
+}
+
+#breadcrumb {
+    padding: 0.5em 0;
+	margin-top: 0.5em;
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	font-weight: bold;
+}
+
+#imgIndex {
+	float: left;
+	width: 20%;
+}
+
+main dl {
+	margin-left: 22%;
+}
+
+main.colonne div dt, main.colonne div dd {
+	display: inline;
+}
+
+main.colonne div dt {
+	font-weight: bold;
+}
+
+main.colonne div > :not(:last-child):after {
+	content: "\00A0-\00A0";
+}
+
+.disp {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#componenti {
+	width: 95%;
+	margin: auto;
+}
+
+footer {
+	text-align: center;
+	border-top: 1px solid #DDD;
+    padding: 1.3em 0.5em 0.5em;
+	font-size: 10pt;
+	font-style: italic;
+}

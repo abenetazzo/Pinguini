@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --headerBkgColor: rgb(0,0,0);
+    --headerTxtColor: rgb(255,255,255);
+    --bkgColor: rgb(255,255,255);
+    --txtColor: rgb(0,0,0);
+    --footerBkgColor: rgb(0,0,0);
+    --footerTxtColor: rgb(255,255,255);
+    --visitedLinkColor: rgb(230,12,83);
+    --headTable: rgb(230,12,83);
+    --linkColor: rgb(255,255,255);
+    --flagColor: rgb(218,103,66);
+    --font-body-family: "Roboto Condensed", sans-serif;
+}
+
+html {
+    font-size: 100%;
+    font-family: var(--font-body-family);
+    line-height: 1.5em;
+    margin: auto;
+    background-image: url("img/bg.png");
+}
+
+.navigationHelp {
+    position: absolute;
+    text-indent: -999em;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+    background-color: var(--headerBkgColor);
+    color: var(--headerTxtColor);
+    text-align: center;
+    padding: 1em;
+}
+
+header h1 {
+	text-indent: -999em;
+	background-image: url("img/logo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 4em;
+	line-height: 1.5em;
+}
+
+nav {
+    background-color: var(--headerBkgColor);
+    color: var(--headerTxtColor);
+}
+
+#menu {
+    text-align: center;
+}
+
+#menu ul {
+    max-width: 1024px;
+    margin: auto;
+    padding: 1em;
+    /*list-style-type: none; inutile col display inline-block definito subito dopo*/
+}
+
+#menu ul li {
+    display: inline-block;
+    width: 20%;
+    margin: 0 0.5em;
+}
+
+nav a:link {
+    color: var(--linkColor);
+}
+
+nav a:visited {
+    color: var(--visitedLinkColor);
+}
+
+#breadcrumb {
+    padding: 1em;
+}
+
+#breadcrumb p {
+    max-width: 1024px;
+    margin: auto;
+}
+
+main {
+    color: var(--txtColor);
+    margin: auto;
+    width: 80%;
+}
+
+main.colonne {
+    column-count: 3;
+    width: 90%;
+}
+
+main.colonne dl {
+    font-size: 90%;
+    margin: auto;
+}
+
+main.colonne div dt, main.colonne div dd {
+    display: inline;
+    text-transform: uppercase;
+}
+
+div:has(dd.disp) {
+	background-image: url("img/soldout.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+dd.disp {
+	font-size: 0.1em;
+	letter-spacing: -1em;
+	color: rgba(0,0,0,0);
+}
+
+dd.citta {
+    color: var(--flagColor);
+    font-weight: bold;
+}
+
+main.colonne time span.giorno {
+    font-weight: bold;
+}
+
+main dl div {
+    padding: 0.3em;
+}
+
+#imgIndex {
+    width: 100%;
+}
+
+footer {
+    background-color: var(--footerBkgColor);
+    color: var(--footerTxtColor);
+    padding: 1em;
+    text-align: center;
+    margin-top: auto;
+}
+
+h2 {
+	text-align: center;
+	margin: 1em;
+}
+
+#componenti {
+	margin: auto;
+	width: 95%;
+	max-width: 1024px;
+	padding-top: 1em;
+	padding-bottom: 2em;
+}
+
+#componenti > dt {
+	background-color: var(--headTable);
+	color: var(--txtColor);
+	border: 1px solid black;
+	padding: 0.5em;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+#componenti > dd {
+	background-color: var(--bkgColor);
+	border: 1px solid black;
+	border-top: none;
+	padding: 0.5em;
+	margin-bottom: 1em;
+}
+
+#componenti > dd img {
+	width: 15%;
+	float: left;
+	margin-right: 1em;
+}
+
+.componente dt {
+	float: left;
+	font-weight: bold;
+}
+
+main table {
+	margin: auto;
+	width: 95%;
+	border-collapse: collapse;
+}
+
+td, th {
+	padding: 0.5em;
+}
+
+th {
+	font-weight: normal;
+}
+
+th time span {
+	font-weight: bold;
+}
+
+thead {
+	background-color: var(--flagColor);
+	color: var(--headerTxtColor);
+}
