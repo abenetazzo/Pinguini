@@ -215,21 +215,21 @@ thead {
 	color: var(--headerTxtColor);
 }
 
-main#biografia {
+main.biografia {
     width: 100%;
 }
 
-#biografia div {
+.biografia div {
     width: 80%;
     margin: auto;
 }
 
-#biografia em {
+.biografia em {
 	font-style: normal;
 	font-weight: bold;
 }
 
-#biografia p {
+.biografia p {
     text-align: justify;
 }
 
