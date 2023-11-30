@@ -154,6 +154,7 @@ footer {
 h2 {
 	text-align: center;
 	margin: 1em;
+    margin-top: 3em;
 }
 
 #componenti {
@@ -242,4 +243,41 @@ div#fotoBand {
     background-position: center;
     margin: 3em 0;
     height: 25em;
+}
+
+p {
+    text-align: center;
+}
+
+ul#album {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5em;
+    list-style-type: none;
+    margin-top: 5em;
+    margin-bottom: 3em;
+}
+
+ul#album li, ul#album img {
+    width: 20em;
+    height: 20em;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    margin-top: 0;
+    transition-property: width, height, -webkit-filter, filter, margin-top;
+    transition-duration: 1s;
+}
+
+ul#album li:hover, ul#album img:hover {
+    width: 25em;
+    height: 25em;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    margin-top: -1.25em;
+}
+
+ul#album li, ul#album img {
+    border-radius: 1em;
 }
