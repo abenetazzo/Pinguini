@@ -74,3 +74,47 @@ footer {
 	font-size: 10pt;
 	font-style: italic;
 }
+
+h2 {
+	margin-top: 18pt;
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+#componenti img {
+	width: 150pt;
+}
+
+#componenti > dt {
+	font-size: 14pt;
+	margin-top: 14pt;
+}
+
+#componenti dt {
+	font-weight: bold;
+}
+
+.componente dt {
+	margin-top: 6pt;
+}
+
+.componente dt, .componente dd {
+	margin-left: -115pt;
+}
+
+p.click {
+	visibility: hidden;
+}
+
+#album img {
+	width: 150pt;
+}
+
+ul#album {
+    display: inline-block;
+	column-count: 3;
+	list-style-type: none;
+}
+#album li {
+	margin-right: 30pt;
+}
