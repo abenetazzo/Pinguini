@@ -1,6 +1,0 @@
-ANALISI ACCESSIBILITA
-
-1) San Junipero
-    div con role=button (trovato con Total Validator)
-    button con stessa etichetta (manca attributo title al posto di aria-label, trovato con Total Validator)
-    link visitati e non visitati non si distinguono
