@@ -3,7 +3,7 @@
 *.DS_Store
 
 # ignore ALL files in ANY temp directory
-temp/
+/temp/*
 
 # ignore html pages substituted by php pages
-discografia.html
+/discografia.html
