@@ -280,3 +280,29 @@ ul#album li:hover, ul#album img:hover {
 ul#album li, ul#album img {
     border-radius: 1em;
 }
+
+dl#albumInfo {
+    float: left;
+}
+
+#albumInfo div > dt {
+	font-weight: bold;
+}
+
+img#albumCover {
+	width: 50%;
+	float: left;
+	margin-right: 1em;
+}
+
+dl#albumInfo div dt, dl#albumInfo div dd {
+    display: inline;
+}
+
+dl#tracklist {
+    padding-left: 1.5em;
+}
+
+dl#tracklist div > dt {
+	font-weight: normal;
+}

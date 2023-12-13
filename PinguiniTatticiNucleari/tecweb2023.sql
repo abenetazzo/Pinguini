@@ -13,13 +13,13 @@ CREATE TABLE Album (
 ) ENGINE=InnoDB DEFAULT CHARSET = utf8;
 
 INSERT INTO Album VALUES
-                      (1, "Fake News", "2022-12-02", "Pop", "images/fakenews.jpg", "fakeNews"),
-                      (2, "Ahia!", "2020-12-04", "Pop", "images/ahia.jpg", "ahia"),
-                      (3, "Fuori dall'Hype Ringo Starr", "2020-02-07", "Pop", "images/fuorihyperingo.jpg", "fuoriHypeRingo"),
-                      (4, "Fuori dall'Hype", "2019-04-05", "Pop", "images/fuorihype.jpg", "fuoriHype"),
-                      (5, "Gioventù brucata", "2017-04-17", "Pop", "images/gioventubrucata.jpg", "gioventuBrucata"),
-                      (6, "Diamo un calcio all'adilà", "2015-12-18", "Pop", "images/calcio.jpg", "calcioAldila"),
-                      (7, "Il Re è nudo", "2014-07-21", "Pop", "images/renudo.jpg", "reNudo");
+                      (1, "Fake News", "2022-12-02", "Pop", "img/fakenews.jpg", "fakeNews"),
+                      (2, "Ahia!", "2020-12-04", "Pop", "img/ahia.jpg", "ahia"),
+                      (3, "Fuori dall'Hype Ringo Starr", "2020-02-07", "Pop", "img/fuorihyperingo.jpg", "fuoriHypeRingo"),
+                      (4, "Fuori dall'Hype", "2019-04-05", "Pop", "img/fuorihype.jpg", "fuoriHype"),
+                      (5, "Gioventù brucata", "2017-04-17", "Pop", "img/gioventubrucata.jpg", "gioventuBrucata"),
+                      (6, "Diamo un calcio all'adilà", "2015-12-18", "Pop", "img/calcio.jpg", "calcioAldila"),
+                      (7, "Il Re è nudo", "2014-07-21", "Pop", "img/renudo.jpg", "reNudo");
 
 CREATE TABLE Traccia (
     ID INT PRIMARY KEY AUTO_INCREMENT,
