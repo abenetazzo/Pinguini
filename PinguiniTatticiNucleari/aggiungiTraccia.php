@@ -17,7 +17,7 @@ $esplicito = "";
 $dataRadio = "";
 $urlVideo = "";
 $note = "";
-$messaggiPerForm = "<ul id=\"errori\">";
+$messaggiPerForm = "<ul>";
 $tracciaInserita = 0;
 
 $connection = new DBAccess();
@@ -37,7 +37,7 @@ if ($connectionOk) {
         }
     }
 
-    if (isset($_POST["submit"])) { // finire
+    if (isset($_POST["submit"])) {
         $errore = false;
         $album = (filter_var($_POST["album"], FILTER_VALIDATE_INT)) ? $_POST["album"] : "";
         $titolo = pulisciInput($_POST["titolo"]);
@@ -46,20 +46,20 @@ if ($connectionOk) {
         $dataRadio = (filter_var($_POST["dataRadio"], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/\d{4}-\d{2}-\d{2}/")))) ? $_POST["dataRadio"] : "gg/mm/aaaa";
         $urlVideo = (filter_var($_POST["urlVideo"], FILTER_VALIDATE_URL)) ? $_POST["urlVideo"] : "";
         $note = pulisciInput($_POST["note"]);
-        if ($album == 0) {
-            $messaggiPerForm .= "<li>Dev'essere selezionato un album valido.</li>";
+        if ($album == "" || $album <= 0) {
+            $messaggiPerForm .= "<li class=\"errori\">Dev'essere selezionato un album valido.</li>";
             $errore = true;
         }
         if ($titolo == "") {
-            $messaggiPerForm .= "<li>Il titolo non può essere vuoto.</li>";
+            $messaggiPerForm .= "<li class=\"errori\">Il titolo non può essere vuoto.</li>";
             $errore = true;
         }
-        if ($durata == 0) {
-            $messaggiPerForm .= "<li>Il brano deve avere una durata maggiore di 0.</li>";
+        if ($durata == "00:00") {
+            $messaggiPerForm .= "<li class=\"errori\">Il brano deve avere una durata maggiore di 0.</li>";
             $errore = true;
         }
         if (($esplicito != "Yes") && ($esplicito != "No")) {
-            $messaggiPerForm .= "<li>Dev'essere indicato se il brano è esplicito o meno.</li>";
+            $messaggiPerForm .= "<li class=\"errori\">Dev'essere indicato se il brano è esplicito o meno.</li>";
             $errore = true;
         }
         if (!$errore) {
@@ -74,12 +74,12 @@ if ($connectionOk) {
                                                     $note);
         }
         if ($tracciaInserita) {
-            $messaggiPerForm .= "<li>Traccia aggiunta correttamente.</li>";
+            $messaggiPerForm .= "<li class=\"ok\">Traccia aggiunta correttamente.</li>";
         }
     }
 }
 else {
-    $messaggiPerForm .= "<li>I sistemi sono momentaneamente fuori servizio, ci scusiamo per il disagio.</li>";
+    $messaggiPerForm .= "<li class=\"errori\">I sistemi sono momentaneamente fuori servizio, ci scusiamo per il disagio.</li>";
 }
 
 $connection -> closeDBConnection();
