@@ -63,7 +63,13 @@
         }
 
         public function getTracceAlbum($id) {
-            $query = "SELECT ID, Titolo, Durata FROM Traccia ORDER BY ID ASC;";
+            $query = "SELECT ID,
+                        Titolo,
+                        Durata,
+                        Esplicito,
+                        DataRadio,
+                        URLVideo
+                        FROM Traccia ORDER BY ID ASC;";
             $queryResult = mysqli_query($this -> connection, $query)
                 or die("Errore in DBAccess" .mysqli_error($this -> connection));
             if (mysqli_num_rows($queryResult) != 0) {
@@ -77,5 +83,28 @@
                 return null;
             }
         }
+
+        public function insertNewTrack(
+            $album, $titolo, $durata, $esplicito, $dataRadio, $urlVideo, $note) {
+                $queryInsert = "INSERT INTO Traccia (
+                                    Titolo,
+                                    Durata, 
+                                    Esplicito,
+                                    URLVideo,
+                                    DataRadio,
+                                    Album,
+                                    Note)
+                                VALUES (
+                                    \"$titolo\",
+                                    \"$durata\",
+                                    $esplicito,
+                                    NULLIF(\"$urlVideo\",\"\"),
+                                    NULLIF(\"$dataRadio\",\"\"),
+                                    $album,
+                                    NULLIF(\"$note\",\"\"));";
+                mysqli_query($this -> connection, $queryInsert)
+                    or die(mysqli_error($this -> connection));
+                return mysqli_affected_rows($this -> connection);
+            }
     }
 ?>

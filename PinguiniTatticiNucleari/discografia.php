@@ -29,6 +29,8 @@ else {
     $stringaAlbum = "<p>I sistemi sono momentaneamente fuori servizio, ci scusiamo per il disagio.</p>";
 }
 
+$connection -> closeDBConnection();
+
 $paginaHTML = str_replace("{album}",$stringaAlbum, $paginaHTML);
 echo $paginaHTML;
 ?>
