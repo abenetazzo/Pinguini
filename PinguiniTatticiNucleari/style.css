@@ -96,6 +96,8 @@ main {
     color: var(--txtColor);
     margin: auto;
     width: 80%;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
 }
 
 main.colonne {
@@ -154,7 +156,6 @@ footer {
 h2 {
 	text-align: center;
 	margin: 1em;
-    margin-top: 3em;
 }
 
 #componenti {
@@ -260,25 +261,29 @@ ul#album {
     margin-bottom: 3em;
 }
 
-ul#album li, ul#album img {
-    width: 20em;
-    height: 20em;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    margin-top: 0;
-    transition-property: width, height, -webkit-filter, filter, margin-top;
-    transition-duration: 1s;
-}
-
-ul#album li:hover, ul#album img:hover {
+ul#album li {
     width: 25em;
     height: 25em;
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-ul#album li, ul#album img {
+ul#album img, ul#album a {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition-property: width, height, -webkit-filter, filter, margin-top;
+    transition-duration: 1s;
     border-radius: 1em;
+    width: 20em;
+    height: 20em;
+}
+
+ul#album img:hover, ul#album a:hover {
+    width: 23em;
+    height: 23em;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
 }
 
 dl#albumInfo {
